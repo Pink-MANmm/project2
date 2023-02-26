@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script src="../static/js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div id="tit">巡天</div>
+    <div class="login-box">
+        <h4 id="title_1">开源遥感情报系统</h4>
+        <h4 id="title_2">Login</h4>
+        <div class="input-box">
+            <form method="POST" action="/main/">
+                {% csrf_token %}
+                <div class="input-text">
+                    <span class="login-login"><img src="../static/logo/person.svg"
+                            style="width: 25px;height: 25px;"></span>
+                    <input type="text" name="userName" id="userName" placeholder="用户名">
+                </div>
+                <div class="input-text">
+                    <span class="login-passwd"><img src="../static/logo/lock.svg"
+                            style="width: 25px;height: 25px;"></span>
+                    <input type="password" name="passWord" id="passWord" placeholder="密码">
+                </div>
+                <div class="input-text" style="width:0;height:0;overflow: hidden;">
+                    <span class="login-passwd"><img src="../static/logo/lock-fill.svg"
+                            style="width: 25px;height: 25px;"></span>
+                    <input id="flag" name="confirm" type="text" placeholder="确认密码">
+                </div>
+                <button class="button" id="enter" type="submit">
+                    登录
+                </button>
+            </form>
+            <div class="signup">
+                还没有账户？<a href="/register" id="register">注册</a>
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/login.js"></script>
+</body>
+
+</html>

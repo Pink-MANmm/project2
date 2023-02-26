@@ -1,0 +1,649 @@
+html,
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+#navigation {
+    position: relative;
+    height: 6%;
+    font: normal 20px/45px '';
+    color: rgb(108, 106, 106);
+    background-color: black;
+    text-align: center;
+    user-select: none;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    height: 88%;
+}
+
+#logout {
+    position: absolute;
+    right: 20px;
+    top: 5.5px;
+    width: 90px;
+    height: 65%;
+    color: white;
+    font: normal 20px/30px '';
+    background: linear-gradient(120deg, #480cd2 0%, #9c09c8 100%);
+    border: 2px solid rgb(116, 24, 135);
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#logout:hover {
+    background: linear-gradient(120deg, #9c09c8 0%, #480cd2 100%);
+}
+
+#Title {
+    position: absolute;
+    left: 20px;
+    width: 90px;
+    color: #a4a7f2;
+    font: normal 40px/45px '';
+    font-family: cursive;
+    user-select: none;
+}
+
+#Missions,
+#Browse,
+#identify,
+#landform,
+#attractions {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    color: white;
+    text-align: center;
+    width: 130px;
+    cursor: pointer;
+}
+
+.flag {
+    position: absolute;
+    display: none;
+    top: -4px;
+    height: 20%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(89, 11, 206);
+}
+
+
+#main {
+    position: relative;
+    margin-left: 0;
+    height: 100%;
+}
+
+#referenceWindow1,
+#targetWindow1 {
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#targetWindow1 {
+    border-right: 4px solid black;
+}
+
+#targetWindow {
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#referenceWindow {
+    float: left;
+    width: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.year {
+    display: inline-block;
+    border-bottom: 1px solid rgb(51, 49, 49);
+    width: 100%;
+    height: 40px;
+    top: 0;
+    text-align: center;
+    font: normal 20px/40px '';
+    color: white;
+    cursor: pointer;
+}
+
+#years_right {
+    display: none;
+    overflow-y: scroll;
+    float: right;
+    width: 138px;
+    height: 100%;
+    background-color: rgb(24 17 40);
+    user-select: none;
+}
+
+#years {
+    display: none;
+    overflow-y: scroll;
+    float: left;
+    width: 138px;
+    height: 100%;
+    background-color: rgb(24 17 40);
+    user-select: none;
+}
+
+.year:hover {
+    background: linear-gradient(120deg, #490d8e 0%, rgb(24 17 40) 50%, #490d8e 100%);
+}
+
+.active {
+    background: linear-gradient(120deg, #490d8e 0%, rgb(24 17 40) 50%, #490d8e 100%);
+}
+
+#function {
+    position: relative;
+    display: none;
+    float: right;
+    width: 166px;
+    height: 100%;
+    background-color: rgb(26 17 48);
+    border-left: 4px solid black;
+    overflow: hidden;
+    user-select: none;
+}
+
+#mission {
+    display: block;
+    height: 8%;
+    font: normal 27px/47px '';
+    color: rgb(207, 196, 219);
+    text-align: center;
+    background-color: rgb(105 77 192);
+    box-shadow: 0 8px 5px rgb(19 18 18);
+    user-select: none;
+}
+
+#missionList {
+    width: 100%;
+    height: 92%;
+    background-color: rgb(24 17 40);
+    box-shadow: 0 8px 5px rgb(19 18 18);
+}
+
+
+.Mission_landform {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(66, 64, 64);
+}
+
+.Mission_identify {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(66, 64, 64);
+}
+
+#addMission_landform,
+#addMission_identify {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(144, 142, 142);
+    cursor: pointer;
+}
+
+#missions {
+    height: 87%;
+    overflow-y: scroll;
+}
+
+#years_right::-webkit-scrollbar,
+#years::-webkit-scrollbar,
+#missions::-webkit-scrollbar {
+    width: 10px;
+    height: 200px;
+}
+
+#years_right::-webkit-scrollbar-thumb,
+#years::-webkit-scrollbar-thumb,
+#missions::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #42027e;
+}
+
+#years_right::-webkit-scrollbar-track,
+#years::-webkit-scrollbar-track,
+#missions::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    background: rgb(24 17 40);
+}
+
+#Green,
+#compare {
+    position: relative;
+    height: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(207, 196, 219);
+    text-align: center;
+    background-color: rgb(105 77 192);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#compare:hover {
+    background-color: rgb(80, 57, 149);
+}
+
+#Tog:hover,
+#addMission:hover {
+    background-color: rgb(85, 62, 153);
+}
+
+.Mission {
+    height: 25px;
+    margin: 7px 2px;
+    color: rgb(207, 196, 219);
+    line-height: 25px;
+}
+
+#del-confirm {
+    position: absolute;
+    margin: 60px 38%;
+    display: none;
+    text-align: center;
+    width: 25%;
+    height: 85px;
+    background-color: rgb(24, 23, 23);
+    color: rgb(182, 180, 180);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(49, 48, 48);
+    z-index: 3;
+    user-select: none;
+}
+
+.del-line {
+    width: 100%;
+    height: 50%;
+    font: normal 20px/42.5px '';
+}
+
+#del-y {
+    float: left;
+    width: 50%;
+    color: rgb(182, 180, 180);
+    background-color: rgb(24, 23, 23);
+    border-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border-top: 2px solid white;
+    font: normal 18px/18.4px '';
+}
+
+#del-n {
+    float: right;
+    width: 50%;
+    color: rgb(182, 180, 180);
+    background-color: rgb(24, 23, 23);
+    border-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border-top: 2px solid white;
+    font: normal 18px/18.4px '';
+}
+
+#option {
+    position: absolute;
+    margin: 60px 30%;
+    display: none;
+    width: 40%;
+    height: 26%;
+    background-color: rgb(24, 23, 23);
+    color: rgb(182, 180, 180);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(49, 48, 48);
+    z-index: 3;
+    user-select: none;
+}
+
+.line {
+    width: 100%;
+    height: 25%;
+}
+
+#p1 {
+    text-align: center;
+    display: inline-block;
+    width: 20%;
+}
+
+#Name {
+    width: 75%;
+}
+
+#p2 {
+    text-align: center;
+    display: inline-block;
+    width: 15%;
+}
+
+#Lat,
+#Lon {
+    display: inline-block;
+    width: 31.52%;
+}
+
+#p3 {
+    text-align: center;
+    display: inline-block;
+    width: 20.5%;
+}
+
+#Zoom {
+    width: 10%;
+}
+
+#add {
+    float: left;
+    width: 50%;
+    color: rgb(182, 180, 180);
+    background-color: rgb(24, 23, 23);
+    border-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+#cancel {
+    width: 50%;
+    color: rgb(182, 180, 180);
+    background-color: rgb(24, 23, 23);
+    border-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+#del-y:hover,
+#del-n:hover,
+#add:hover,
+#cancel:hover {
+    background-color: #2e3031;
+}
+
+.missionName {
+    float: left;
+    width: 80%;
+    cursor: pointer;
+    background-color: rgb(27 32 83);
+    box-shadow: 5px 5px 5px rgb(19 18 18);
+}
+
+.act {
+    background: linear-gradient(120deg, #5711a6 0%, rgb(27 32 83) 100%);
+}
+
+.del {
+    float: left;
+    width: 20%;
+    text-align: center;
+    background-color: rgb(18, 21, 58);
+    box-shadow: 5px 5px 5px rgb(19 18 18);
+    cursor: pointer;
+}
+
+#screenshotDiv {
+    position: absolute;
+    height: 93.7%;
+    top: 45px;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.hide {
+    display: none;
+}
+
+.js-screenshot-image {
+    height: 60%;
+    border: 10px solid white;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#screenshotDiv>* {
+    margin: 0.5em;
+}
+
+.screenshotCursor {
+    cursor: crosshair;
+}
+
+.action-button {
+    padding: 0.6em;
+    border: 1px solid #0079c1;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+.action-button:hover,
+.action-button:focus {
+    background: #0079c1;
+    color: white;
+}
+
+#maskDiv {
+    position: absolute;
+    background: rgba(255, 51, 0, 0.1);
+    border: 2px dashed rgb(255, 51, 0);
+}
+
+#position {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 7;
+}
+
+.lPos {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    height: 6%;
+    width: 68px;
+    text-align: center;
+    margin: 7.6px 5px;
+    color: rgb(182, 180, 180);
+    font-size: 17px;
+    user-select: none;
+}
+
+.pos {
+    position: relative;
+    display: inline-block;
+    height: 6%;
+    width: 180px;
+    margin: 7.6px 10px;
+    color: black;
+    background: linear-gradient(120deg, #a6c0fe 0%, #6115bd 600%);
+    font: normal 17.5px/22.8px '';
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#AI_landform {
+    position: absolute;
+    display: none;
+    margin: 50px 10.55%;
+    top: 30px;
+    width: 80%;
+    height: 75%;
+    background-color: #424b5f;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(49, 48, 48);
+    z-index: 2;
+    opacity: 0;
+}
+
+#similarity {
+    padding: 0 10px;
+    width: 20%;
+    background-color: #303644;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.sim {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    height: 20%;
+    font: bold 20px/20px '';
+}
+
+.similar {
+    margin: 15px 0;
+    width: 70%;
+    height: 22%;
+    color: black;
+    font: normal 15px/20px '';
+    background: linear-gradient(120deg, #a6c0fe 0%, #6115bd 600%);
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+#compare-img {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.compare-img {
+    height: 90%;
+    width: 45%;
+}
+
+#AI_recognize {
+    position: absolute;
+    display: none;
+    margin: 50px 35.5%;
+    top: 0;
+    width: 30%;
+    height: 88%;
+    background-color: #424b5f;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(49, 48, 48);
+    z-index: 2;
+    opacity: 0;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    z-index: 4;
+    font: normal 16px/20px '';
+    border-radius: 20px;
+    text-align: center;
+    color: #726d6d;
+    border: 2px solid #726d6d;
+    cursor: pointer;
+    user-select: none;
+}
+
+#recognize {
+    width: 100%;
+    height: 100%;
+}
+
+#deff {
+    width: 98%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#imag {
+    position: absolute;
+    width: 95%;
+    height: 85%;
+    top: 10%;
+    left: 2.6%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#span {
+    position: absolute;
+    top: 3%;
+    left: 2.6%;
+    font: normal 15px/30px '';
+}
+
+.recIn {
+    height: 3%;
+    width: 120px;
+    background: linear-gradient(120deg, #a6c0fe 0%, #6115bd 600%);
+    font: normal 15px/30px '';
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#Tog,
+#addMission {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    height: 75%;
+    width: 55px;
+    margin: 6.6px 10px;
+    color: white;
+    background: linear-gradient(120deg, #480cd2 0%, #9c09c8 100%);
+    border: 2px solid rgb(116, 24, 135);
+    cursor: pointer;
+    user-select: none;
+    border-radius: 38px;
+}
+
+#Tog {
+    right: 68.2px;
+}
+
+#toggle-img {
+    height: 100%;
+    width: 100%;
+}
+
+#plus-img {
+    height: 100%;
+    width: 100%;
+}
